@@ -51,7 +51,7 @@ goafr = GreedyOtherAdaptiveFaceRouting()
 goafr_plus = GOAFRPlus()
 print('Route from ' + str(s) + ' to ' + str(d) + ' exists')
 # result, route, resultTag = goafr.route(planar_graph, s, d, positions)
-success, route, resultTag = goafr_plus.find_route(planar_graph, s, d, positions, 1.4, np.sqrt(2), 0.01)
+success, route, resultTag = goafr_plus.find_route_goafr_plus(planar_graph, s, d, positions, 1.4, np.sqrt(2), 0.01)
 if success:
     print('Result tag: ' + str(resultTag))
     print('Route: ' + str(route))

@@ -11,7 +11,7 @@ class GreedyRouting:
         self.positions = positions
         self.route = []
 
-    def find_route(self) -> [bool, list[int], str]:
+    def find_route_greedy(self) -> [bool, list[int], str]:
         self.route.append(self.s)
         if self.s == self.d:
             return True, self.route, ResultTag.SUCCESS
@@ -31,12 +31,9 @@ class GreedyRouting:
                     self.circle_bound_check()
                     ##########################################################################################
                     print('Next node greedy: ' + str(self.s))
-                    return self.find_route()
+                    return self.find_route_greedy()
                 else:
                     return False, self.route, ResultTag.LOCAL_MINIMUM
-
-    def greedy_routing_mode(self):
-        self.find_route()
 
     def ellipse_bound_check(self):
         # Double ellipse major axis if bound is hit in GOAFR

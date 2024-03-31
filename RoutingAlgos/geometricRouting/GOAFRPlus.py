@@ -19,10 +19,10 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
         else:
             raise ValueError('Invalid parameters')
 
-    def find_route(self) -> tuple[bool, list[int], str]:
+    def find_route_goafr_plus(self) -> tuple[bool, list[int], str]:
         # TODO: This is identical to GOAFR apart from calling FaceRouting instead of OAFR
         # Greedy Routing Mode
-        result_greedy, route_greedy, result_tag_greedy = self.greedy_routing_mode()
+        result_greedy, route_greedy, result_tag_greedy = self.find_route_greedy()
         self.route.extend(route_greedy)
         if result_greedy:
             return True, self.route, result_tag_greedy
@@ -31,7 +31,7 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
         # If greedy mode failed (local minimum) -> Go into Face Routing Mode
         if result_tag_greedy == ResultTag.LOCAL_MINIMUM:
             print("Switched to Face Routing Mode")
-            result_face, route_face, result_tag_face = self.face_routing_mode()
+            result_face, route_face, result_tag_face = self.find_route_obfr()
             self.route.extend(route_face)
             if result_face:
                 return True, self.route, result_tag_face
@@ -40,7 +40,7 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
                     return False, self.route, result_tag_face
                 else:
                     self.s = self.route[-1]
-                    return self.find_route()
+                    return self.find_route_goafr_plus()
         else:
             # Dead end was encountered in greedy mode
             return False, self.route, result_tag_greedy
@@ -67,7 +67,7 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
                 last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
                 self.route.extend(path_last_node_reached)
                 self.s = last_node_reached
-                self.find_route()
+                self.find_route_goafr_plus()
 
     # Condition 2c
     def check_counters(self, cur_node, current_face, half_edges):
@@ -80,4 +80,4 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
             last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
             self.route.extend(path_last_node_reached)
             self.s = last_node_reached
-            self.find_route()
+            self.find_route_goafr_plus()

@@ -31,8 +31,8 @@ class OtherBoundedFaceRouting(OtherFaceRouting):
         # Condition 2b in GOAFR+
         pass
 
-    def face_routing_mode(self):
-        self.find_route()
+    def find_route_obfr(self) -> tuple[bool, list[int], str]:
+        return super().find_route_ofr()
 
     def invert_direction(self, bound_hit, half_edges, prev_node, cur_node, v, face_nodes):
         if bound_hit:
@@ -53,8 +53,8 @@ class OtherAdaptiveFaceRouting(OtherBoundedFaceRouting):
         ellipse = create_ellipse(positions[start], positions[destination])
         super().__init__(graph, start, destination, positions, ellipse)
 
-    def find_route(self) -> tuple[bool, list[int], str]:
-        result_obfr, route_obfr, result_tag_obfr = super().find_route()
+    def find_route_oafr(self) -> tuple[bool, list[int], str]:
+        result_obfr, route_obfr, result_tag_obfr = super().find_route_ofr()
         self.route.extend(route_obfr)
         self.s = self.route[-1]
         if result_obfr:
@@ -70,13 +70,13 @@ class OtherAdaptiveFaceRouting(OtherBoundedFaceRouting):
                     # If any of the nodes is not inside the ellipse, then double the major axis (width) and continue search
                     self.searchable_area.set_width(self.searchable_area.width * 2)
                     print('Ellipse width doubled')
-                    return self.find_route()
+                    return self.find_route_oafr()
             else:
                 # ResultTag.LOOP or ResultTag.DEAD_END or ResultTag.FACE
                 return result_obfr, self.route, result_tag_obfr
 
     def oafr_routing_mode(self):
-        self.find_route()
+        self.find_route_oafr()
 
 def create_ellipse(pos_s: tuple, pos_d: tuple) -> matplotlib.patches.Ellipse:
     distance_s_d = distance.euclidean(pos_s, pos_d)

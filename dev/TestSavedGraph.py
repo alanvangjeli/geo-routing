@@ -36,7 +36,7 @@ plt.show()
 print('Route from ' + str(s) + ' to ' + str(d) + ' exists')
 ofr = OtherFaceRouting()
 goafr_plus = GOAFRPlus()
-result, route, resultTag = goafr_plus.find_route(planar_graph, s, d, positions, 1.4, np.sqrt(2), 0.01)
+result, route, resultTag = goafr_plus.find_route_goafr_plus(planar_graph, s, d, positions, 1.4, np.sqrt(2), 0.01)
 if result:
     print('Result tag: ' + str(resultTag))
     print('Route: ' + str(route))

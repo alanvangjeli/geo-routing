@@ -106,16 +106,16 @@ for i in range(k):
     #    planar_graph.subgraph(c)
 
     #algorithm = GreedyRouting(planar_graph, s, d, positions)
-    algorithm = OtherFaceRouting(planar_graph, s, d, positions)
-    #algorithm = OtherAdaptiveFaceRouting(planar_graph, s, d, positions, 0.0, 0.0)
+    #algorithm = OtherFaceRouting(planar_graph, s, d, positions)
+    #algorithm = OtherAdaptiveFaceRouting(planar_graph, s, d, positions)
     #algorithm = GreedyOtherAdaptiveFaceRouting(planar_graph, s, d, positions)
-    #algorithm = GOAFRPlus(planar_graph, s, d, positions)
+    algorithm = GOAFRPlus(planar_graph, s, d, positions, np.sqrt(2), 0.01, 1.4)
 
     # Execute algorithm
     start = time.process_time()
     # GOAFR params: 1.4, np.sqrt(2), 0.01
     #success, route, resultTag = algorithm.find_route(planar_graph, s, d, positions)
-    success, route, resultTag = algorithm.find_route()
+    success, route, resultTag = algorithm.find_route_goafr_plus()
 
     # Measure metrics
     # Success

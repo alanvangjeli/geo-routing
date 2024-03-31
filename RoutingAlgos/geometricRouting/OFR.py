@@ -20,7 +20,7 @@ class OtherFaceRouting:
         self.previous_face = set()
         self.previous_closest_node = start
 
-    def find_route(self) -> tuple[bool, list, str]:
+    def find_route_ofr(self) -> tuple[bool, list, str]:
         """
         Other Face Routing OFR
         """
@@ -229,7 +229,7 @@ class OtherFaceRouting:
         # Check condition 2c in GOAFR+
         pass
     def terminate_face_routing_mode(self):
-        return self.find_route()
+        return self.find_route_ofr()
     def check_closest_node_progress(self, last_node_reached, closest_node) -> bool:
         return True
 

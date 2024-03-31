@@ -8,13 +8,13 @@ class GreedyOtherAdaptiveFaceRouting(GreedyRouting, OtherAdaptiveFaceRouting):
         GreedyRouting.__init__(self, graph, start, destination, positions)
         OtherAdaptiveFaceRouting.__init__(self, graph, start, destination, positions)
 
-    def find_route(self) -> tuple[bool, list[int], str]:
+    def find_route_goafr(self) -> tuple[bool, list[int], str]:
         """
         Greedy other adaptive face routing GOAFR
         """
 
         # Greedy mode
-        result_greedy, route_greedy, result_tag_greedy = self.greedy_routing_mode()
+        result_greedy, route_greedy, result_tag_greedy = self.find_route_greedy()
         self.route.extend(route_greedy)
         if result_greedy:
             return True, self.route, result_tag_greedy
@@ -32,7 +32,7 @@ class GreedyOtherAdaptiveFaceRouting(GreedyRouting, OtherAdaptiveFaceRouting):
                     return False, self.route, result_tag_oafr
                 else:
                     self.s = self.route[-1]
-                    return self.find_route()
+                    return self.find_route_goafr()
         else:
             # Dead end was encountered in greedy mode
             return False, self.route, result_tag_greedy
