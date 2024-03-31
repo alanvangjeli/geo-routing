@@ -1,6 +1,4 @@
 
-Xpython:S1135"4Complete the task associated to this "TODO" comment.(¹¯µ”ÿÿÿÿÿ8‹›şˆé1
-Upython:S1481P"6Replace unused local variable "closest_node" with "_".(˜†ùÇ8Ã¶¸ºÑ1
-npython:S930R"KRemove 8 unexpected arguments; 'find_route' expects 0 positional arguments.(ú¬ªÿÿÿÿÿ8ôºøˆé1
-Upython:S1481\"6Replace unused local variable "closest_node" with "_".(˜†ùÇ8ÄÀÉºÑ1
-npython:S930^"KRemove 8 unexpected arguments; 'find_route' expects 0 positional arguments.(ú¬ªÿÿÿÿÿ8¡‰ùˆé1
+Xpython:S1135"4Complete the task associated to this "TODO" comment.(¹¯µ”ÿÿÿÿÿ8‹›şˆé1
+Zpython:S1481C"6Replace unused local variable "closest_node" with "_".(Îşù‹úÿÿÿÿ8Ã¶¸ºÑ1
+Zpython:S1481P"6Replace unused local variable "closest_node" with "_".(Îşù‹úÿÿÿÿ8ÄÀÉºÑ1

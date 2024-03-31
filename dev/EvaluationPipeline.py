@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 from GraphGenerators import random_planar_graph
 from RoutingAlgos.geometricRouting.GOAFRPlus import GOAFRPlus
-from RoutingAlgos.geometricRouting.GreedyOtherAdaptiveFaceRouting import GreedyOtherAdaptiveFaceRouting
+from RoutingAlgos.geometricRouting.GOAFR import GreedyOtherAdaptiveFaceRouting
 from RoutingAlgos.geometricRouting.OAFR import OtherBoundedFaceRouting, OtherAdaptiveFaceRouting
 from RoutingAlgos.geometricRouting.OFR import OtherFaceRouting
 from RoutingAlgos.geometricRouting.GreedyRouting import GreedyRouting
@@ -105,12 +105,11 @@ for i in range(k):
     # if contains_sd:
     #    planar_graph.subgraph(c)
 
-    algorithm = GreedyRouting(planar_graph, s, d, positions)
-    # algorithm = OtherFaceRouting(planar_graph, s, d, positions)
-    # algorithm = OtherBoundedFaceRouting(planar_graph, s, d, positions)
-    # algorithm = OtherAdaptiveFaceRouting(planar_graph, s, d, positions)
-    # algorithm = GreedyOtherAdaptiveFaceRouting(planar_graph, s, d, positions)
-    # algorithm = GOAFRPlus(planar_graph, s, d, positions)
+    #algorithm = GreedyRouting(planar_graph, s, d, positions)
+    algorithm = OtherFaceRouting(planar_graph, s, d, positions)
+    #algorithm = OtherAdaptiveFaceRouting(planar_graph, s, d, positions, 0.0, 0.0)
+    #algorithm = GreedyOtherAdaptiveFaceRouting(planar_graph, s, d, positions)
+    #algorithm = GOAFRPlus(planar_graph, s, d, positions)
 
     # Execute algorithm
     start = time.process_time()

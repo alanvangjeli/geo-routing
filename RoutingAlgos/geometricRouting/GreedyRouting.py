@@ -1,17 +1,14 @@
 import networkx as nx
-from matplotlib.patches import Ellipse, Circle
 from scipy.spatial import distance
 from operator import itemgetter
 from util import ResultTag
 
 class GreedyRouting:
-    def __init__(self, graph: nx.DiGraph = None, start: int = None, destination: int = None, positions: dict = None, rho: float = 0.0, searchable_area: Ellipse | Circle | None = None):
+    def __init__(self, graph: nx.DiGraph, start: int, destination: int, positions: dict):
         self.g = graph
         self.s = start
         self.d = destination
         self.positions = positions
-        self.rho = rho
-        self.searchable_area = searchable_area
         self.route = []
 
     def find_route(self) -> [bool, list[int], str]:

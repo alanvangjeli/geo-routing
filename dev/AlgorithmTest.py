@@ -5,7 +5,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from GraphGenerators import random_planar_graph
 from RoutingAlgos.geometricRouting.GOAFRPlus import GOAFRPlus
-from RoutingAlgos.geometricRouting.GreedyOtherAdaptiveFaceRouting import GreedyOtherAdaptiveFaceRouting
+from RoutingAlgos.geometricRouting.GOAFR import GreedyOtherAdaptiveFaceRouting
 from RoutingAlgos.geometricRouting.OAFR import OtherBoundedFaceRouting, OtherAdaptiveFaceRouting
 from RoutingAlgos.geometricRouting.OFR import OtherFaceRouting
 

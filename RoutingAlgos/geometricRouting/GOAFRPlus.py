@@ -2,19 +2,22 @@ import networkx as nx
 from matplotlib.patches import Circle
 from scipy.spatial import distance
 from RoutingAlgos.geometricRouting.GreedyRouting import GreedyRouting
-from RoutingAlgos.geometricRouting.OAFR import OtherAdaptiveFaceRouting
+from RoutingAlgos.geometricRouting.OAFR import OtherBoundedFaceRouting
 from util import ResultTag
 
-class GOAFRPlus(GreedyRouting, OtherAdaptiveFaceRouting):
-    def __init__(self, graph: nx.DiGraph = None, start: int = None, destination: int = None, positions: dict = None,
-                 rho: float = 0.0, sigma: float = 0.0, rho_0: float = 0.0):
-        self.sigma = sigma
-        if self.sigma > 0 and rho > rho_0 >= 1:
+class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
+    def __init__(self, graph: nx.DiGraph, start: int, destination: int, positions: dict, rho: float = 0.0, sigma: float = 0.0, rho_0: float = 0.0):
+        if sigma > 0 and rho > rho_0 >= 1:
+            self.sigma = sigma
+            self.rho = rho
+            self.p = 0  # counts the nodes closer to d than face_starting_node
+            self.q = 0  # counts the nodes not located closer to d than face_starting_node
             distance_s_d = distance.euclidean(positions[start], positions[destination])
             circle = Circle(positions[destination], rho_0 * distance_s_d)
+            GreedyRouting.__init__(self, graph, start, destination, positions)
+            OtherBoundedFaceRouting.__init__(self, graph, start, destination, positions, circle)
         else:
             raise ValueError('Invalid parameters')
-        GreedyRouting.__init__(self, graph, start, destination, positions, rho, circle)
 
     def find_route(self) -> tuple[bool, list[int], str]:
         # TODO: This is identical to GOAFR apart from calling FaceRouting instead of OAFR
@@ -28,7 +31,7 @@ class GOAFRPlus(GreedyRouting, OtherAdaptiveFaceRouting):
         # If greedy mode failed (local minimum) -> Go into Face Routing Mode
         if result_tag_greedy == ResultTag.LOCAL_MINIMUM:
             print("Switched to Face Routing Mode")
-            result_face, route_face, result_tag_face = self.face_routing_mode(g, current_node, d, route, positions, circle, sigma, rho)
+            result_face, route_face, result_tag_face = self.face_routing_mode()
             self.route.extend(route_face)
             if result_face:
                 return True, self.route, result_tag_face
@@ -41,22 +44,6 @@ class GOAFRPlus(GreedyRouting, OtherAdaptiveFaceRouting):
         else:
             # Dead end was encountered in greedy mode
             return False, self.route, result_tag_greedy
-
-    def face_routing_mode(self, g: nx.DiGraph, s: int, d: int, route: list, positions: dict, circle: Circle,
-                          sigma: float, rho):
-        """
-        Face routing mode
-        @param g - Graph to route on
-        @param s - Source node
-        @param d - Destination node
-        @param route - Route so far
-        @param positions - Positions of nodes
-        @param circle - Circle that bounds face traversal
-        @param rho - Value to divide circle radius by
-        @param sigma - Threshold
-        """
-
-        return super().face_routing(g, s, d, route, positions, set(), s, circle, sigma, rho)
 
     ################################################################################################################################################
     # GreedyRouting overrides
@@ -71,24 +58,26 @@ class GOAFRPlus(GreedyRouting, OtherAdaptiveFaceRouting):
     ###################################################################################################################################################
     # OtherAdaptiveFaceRouting overrides
     ###################################################################################################################################################
-    def goafr_plus_2b(self, g, cur_node, d, positions, half_edges, current_face, route, bound_hit, p, sigma, rho, circle):
+    def goafr_plus_2b(self, cur_node, half_edges, current_face, bound_hit):
         if bound_hit:
-            if p == 0:
+            if self.p == 0:
                 # Enlarge circle and continue in Face Routing Mode
-                circle.set_radius(circle.radius * rho)
+                self.searchable_area.set_radius(self.searchable_area.radius * self.rho)
             else:
-                last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(g, cur_node, d, positions, current_face, half_edges, circle)
-                route.extend(path_last_node_reached)
-                self.find_route(g, last_node_reached, d, route, positions, circle, sigma, rho)
+                last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
+                self.route.extend(path_last_node_reached)
+                self.s = last_node_reached
+                self.find_route()
 
     # Condition 2c
-    def check_counters(self, g, route, p, q, sigma, rho, positions, cur_node, v, d, current_face, half_edges, circle):
+    def check_counters(self, cur_node, current_face, half_edges):
         # if cur_node is closer to d than local minimum v
-        if distance.euclidean(positions[cur_node], positions[d]) < distance.euclidean(positions[v], positions[d]):
-            p += 1
+        if distance.euclidean(self.positions[cur_node], self.positions[self.d]) < distance.euclidean(self.positions[self.s], self.positions[self.d]):
+            self.p += 1
         else:
-            q += 1
-        if p > sigma * q:
-            last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(g, cur_node, d, positions, current_face, half_edges, circle)
-            route.extend(path_last_node_reached)
-            self.find_route(g, last_node_reached, d, route, positions, circle, sigma, rho)
+            self.q += 1
+        if self.p > self.sigma * self.q:
+            last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
+            self.route.extend(path_last_node_reached)
+            self.s = last_node_reached
+            self.find_route()
