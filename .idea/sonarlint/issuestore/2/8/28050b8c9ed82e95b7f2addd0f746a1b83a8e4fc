@@ -1,0 +1,20 @@
+
+Npython:S1172"1Remove the unused function parameter "positions".(úÚ­Ñÿÿÿÿÿ
+Fpython:S1172")Remove the unused function parameter "g".(úÚ­Ñÿÿÿÿÿ
+Kpython:S1172".Remove the unused function parameter "PpNext".(úÚ­Ñÿÿÿÿÿ
+Jpython:S1172"-Remove the unused function parameter "route".(úÚ­Ñÿÿÿÿÿ
+Npython:S1172"1Remove the unused function parameter "PpCurrent".(úÚ­Ñÿÿÿÿÿ
+Fpython:S1172")Remove the unused function parameter "L".(úÚ­Ñÿÿÿÿÿ
+Fpython:S1172")Remove the unused function parameter "R".(úÚ­Ñÿÿÿÿÿ
+Fpython:S1172")Remove the unused function parameter "d".(úÚ­Ñÿÿÿÿÿ
+ipython:S117"MRename this parameter "L" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÚ­Ñÿÿÿÿÿ
+ipython:S117"MRename this parameter "N" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÚ­Ñÿÿÿÿÿ
+qpython:S117"URename this parameter "PpCurrent" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÚ­Ñÿÿÿÿÿ
+npython:S117"RRename this parameter "PpNext" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÚ­Ñÿÿÿÿÿ
+ipython:S117"MRename this parameter "R" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÚ­Ñÿÿÿÿÿ
+spython:S930"WAdd 12 missing arguments; 'direct_greedy_routing_mode' expects 12 positional arguments.(÷ÎÉ½úÿÿÿÿ
+Epython:S1172"-Remove the unused function parameter "route".(¡´Çû
+Mpython:S1172"5Remove the unused function parameter "previous_face".(¡´Çû
+gpython:S1226"OIntroduce a new variable or use its initial value before reassigning 'ellipse'.(¡´Çû
+rpython:S930"VAdd 5 missing arguments; 'direct_greedy_routing_mode' expects 12 positional arguments.(Ëñ‹—úÿÿÿÿ
+xpython:S1186"[Add a nested comment explaining why this function is empty, or complete the implementation.(Í¿şÿÿÿÿÿ

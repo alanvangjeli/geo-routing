@@ -1,0 +1,14 @@
+
+^python:S2208"GImport only needed names or import the module and then use its members.(Ã¢X
+tpython:S117"XRename this local variable "A_links" to match the regular expression ^[_a-z][a-z0-9_]*$.(ùúÒ÷øÿÿÿÿ
+zpython:S1542	"bRename function "KeepForwardingPrecomputation" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ûë»Ÿ
+lpython:S3776	"TRefactor this function to reduce its Cognitive Complexity from 51 to the 15 allowed.(Ûë»Ÿ
+Jpython:S1940"-Use the opposite operator ("not in") instead.(û¦ÕÁùÿÿÿÿ
+Epython:S1940 "-Use the opposite operator ("not in") instead.(øûœ
+Ypython:S5754E"<Specify an exception class to catch or reraise the exception(Í¨Ø¡ûÿÿÿÿ
+Tpython:S5754P"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+opython:S117q"XRename this local variable "A_links" to match the regular expression ^[_a-z][a-z0-9_]*$.(ŠÈÕ
+xpython:S1542b"[Rename function "KeepForwardingRouting" to match the regular expression ^[a-z_][a-z0-9_]*$.(à¬œ³ùÿÿÿÿ
+Rpython:S1481p"5Replace unused local variable "edge_weight" with "_".(üğûéùÿÿÿÿ
+rpython:S3776b"URefactor this function to reduce its Cognitive Complexity from 109 to the 15 allowed.(à¬œ³ùÿÿÿÿ
+±python:S1515Š"’Add a parameter to the parent lambda function and use variable "s" as its default value; The value of "s" might change at the next loop iteration.(şßÀ˜øÿÿÿÿ

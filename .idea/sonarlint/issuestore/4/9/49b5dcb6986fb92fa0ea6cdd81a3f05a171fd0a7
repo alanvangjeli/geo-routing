@@ -1,0 +1,23 @@
+
+Hpython:S1066”"/Merge this if statement with the enclosing one.(µ™”ç
+rpython:S1542"ZRename function "MaximizeFindClusters" to match the regular expression ^[a-z_][a-z0-9_]*$.(×ş«
+spython:S1542"VRename function "GreedyMaximalDAG" to match the regular expression ^[a-z_][a-z0-9_]*$.(ŒÅ˜öûÿÿÿÿ
+Fpython:S1481")Remove the unused local variable "count".(óÿÑ—øÿÿÿÿ
+Qpython:S905&":Remove or refactor this statement; it has no side effects.(¸Ş¤£
+jpython:S1542-"RRename function "DegreeMaxDAG" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ù¡„¸
+upython:S1542D"XRename function "FindTreeNoContinue" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÓÅµ²ûÿÿÿÿ
+lpython:S117r"URename this local variable "curT" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÎğËƒ
+spython:S1542j"VRename function "RouteDetCircSkip" to match the regular expression ^[a-z_][a-z0-9_]*$.(ñİ½äşÿÿÿÿ
+qpython:S3776j"TRefactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.(ñİ½äşÿÿÿÿ
+epython:S117¹"MRename this parameter "G" to match the regular expression ^[_a-z][a-z0-9_]*$.(îğ¦Ï
+Kpython:S1940Í"-Use the opposite operator ("not in") instead.(Ï¼Ñëÿÿÿÿÿ
+dpython:S117Ü"MRename this parameter "G" to match the regular expression ^[_a-z][a-z0-9_]*$.(¿åĞI
+kpython:S117ç"SRename this local variable "Gm" to match the regular expression ^[_a-z][a-z0-9_]*$.(ë•‹ô
+Kpython:S1940ì"-Use the opposite operator ("not in") instead.(•ÑÍÍøÿÿÿÿ
+jpython:S117ô"MRename this parameter "G" to match the regular expression ^[_a-z][a-z0-9_]*$.(¼Éƒ›ûÿÿÿÿ
+epython:S117‚"MRename this parameter "G" to match the regular expression ^[_a-z][a-z0-9_]*$.(åƒè±
+ppython:S117°"SRename this local variable "Gc" to match the regular expression ^[_a-z][a-z0-9_]*$.(’ÎØ–şÿÿÿÿ
+ppython:S117¡"SRename this local variable "Gm" to match the regular expression ^[_a-z][a-z0-9_]*$.(ªéª†üÿÿÿÿ
+kpython:S1542’"RRename function "FindClusters" to match the regular expression ^[a-z_][a-z0-9_]*$.(±ëæ©
+mpython:S3776’"TRefactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.(±ëæ©
+Epython:S1940Í"-Use the opposite operator ("not in") instead.(ªêºr

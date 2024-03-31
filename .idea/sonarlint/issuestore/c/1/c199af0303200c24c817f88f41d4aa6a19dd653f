@@ -1,0 +1,29 @@
+
+6python:S125"Remove this commented out code.(Ü√Î’
+Tpython:S5754"<Specify an exception class to catch or reraise the exception(à …∑
+epython:S1542O"MRename function "TestCut" to match the regular expression ^[a-z_][a-z0-9_]*$.(åœˇä
+lpython:S1542\"TRename function "FindRandomTree" to match the regular expression ^[a-z_][a-z0-9_]*$.(ëÀó˝
+lpython:S3776\"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(ëÀó˝
+@python:S108|")Either remove or fill this block of code.(„ë€æ
+6python:S125}"Remove this commented out code.(Æ“†â
+lpython:S1542Ç"NRename function "FindTree" to match the regular expression ^[a-z_][a-z0-9_]*$.(ˇÊﬁ⁄˙ˇˇˇˇ
+rpython:S3776Ç"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(ˇÊﬁ⁄˙ˇˇˇˇ
+7python:S125£"Remove this commented out code.(‡ÒÂé
+opython:S1542™"QRename function "RandomTrees" to match the regular expression ^[a-z_][a-z0-9_]*$.(ûÙü¯ˇˇˇˇ
+7python:S125∞"Remove this commented out code.(Áóº‰
+~python:S1542æ"eRename function "GreedyArborescenceDecomposition" to match the regular expression ^[a-z_][a-z0-9_]*$.(¶Øó°
+7python:S125ƒ"Remove this commented out code.(Áóº‰
+epython:S117÷"MRename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.(˝Ò¸ö
+npython:S117ò"VRename this local variable "distA" to match the regular expression ^[_a-z][a-z0-9_]*$.(´®πµ
+<python:S125†"Remove this commented out code.(ÈÙ†â˘ˇˇˇˇ
+spython:S117‘"VRename this local variable "heapT" to match the regular expression ^[_a-z][a-z0-9_]*$.(†ØÕŸ˚ˇˇˇˇ
+hpython:S1542À"ORename function "prepareDS" to match the regular expression ^[a-z_][a-z0-9_]*$.(√ßÀô
+fpython:S1542€"MRename function "trySwap" to match the regular expression ^[a-z_][a-z0-9_]*$.(∏ı˝†
+mpython:S3776€"TRefactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.(∏ı˝†
+epython:S1854ñ"LRemove this assignment to local variable 'stretch'; the value is never used.(≈ï€
+dpython:S1854 "FRemove this assignment to local variable 'g'; the value is never used.(ï öÀ˝ˇˇˇˇ
+8python:S3626∆"Remove this redundant continue.(¿ñ¨à
+mpython:S3776ù"TRefactor this function to reduce its Cognitive Complexity from 39 to the 15 allowed.(∏∏ﬂæ
+mpython:S117Û"URename this local variable "curT" to match the regular expression ^[_a-z][a-z0-9_]*$.(ŒÀÉ
+ppython:S1542›"RRename function "RouteDetCirc" to match the regular expression ^[a-z_][a-z0-9_]*$.(ãø˙Ç˘ˇˇˇˇ
+rpython:S3776›"TRefactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.(ãø˙Ç˘ˇˇˇˇ

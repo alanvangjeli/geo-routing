@@ -13,3 +13,11 @@ def require_args(required_args: list[str]):
             return func(*args, **kwargs)
         return wrapper
     return decorator
+
+class ResultTag:
+    DEAD_END: str = 'Dead-end'
+    LOOP: str = 'Stuck in a loop'
+    LOCAL_MINIMUM: str = 'Local minimum'
+    SUCCESS: str = 'Destination was reached'
+    FACE: str = 'Face was traversed'
+    NO_PROGRESS: str = 'Current closest node is the same as in the previous iteration'
