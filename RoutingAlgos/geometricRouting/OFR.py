@@ -42,11 +42,16 @@ class OtherFaceRouting:
             # Only one neighbor
             if len(neighbors) == 1:
                 print('Only neighbor: ' + str(neighbors[0]))
-            current_face, dead_end_encountered = self.traverse_face(mark_half_edges=half_edges)
+            current_face, half_edges, result_tag, condition_2c = self.traverse_face(half_edges=half_edges)
             current_node = half_edges[-1][1]
             for edge in half_edges:
                 self.route.append(edge[1])
-            if dead_end_encountered:
+            # Condition 2b in GOAFR+
+            if result_tag == ResultTag.SECOND_BOUND_HIT and self.is_goafr_plus():
+                return self.goafr_plus_2b(current_node, half_edges, current_face)
+            if condition_2c and self.is_goafr_plus():
+                return self.goafr_plus_greedy_mode()
+            if result_tag == ResultTag.DEAD_END:
                 return False, self.route, ResultTag.DEAD_END
             if current_node == self.d:
                 # Destination was reached
@@ -75,12 +80,12 @@ class OtherFaceRouting:
         # In GOAFR only one face is traversed
         return self.terminate_face_routing_mode()
 
-    def traverse_face(self, mark_half_edges=None) -> tuple[set, bool]:
-        """Returns nodes on the face that is intersected by vd.
+    def traverse_face(self, half_edges=None) -> tuple[set, list, str, bool]:
+        """Returns nodes on the face that is intersected by sd.
 
         Parameters
         ----------
-        mark_half_edges: list, optional
+        half_edges: list, optional
             List to which all encountered half-edges are added.
 
         Returns
@@ -88,9 +93,10 @@ class OtherFaceRouting:
         face : set
             A set of nodes that lie on this face.
         """
-        if mark_half_edges is None:
-            mark_half_edges = []
-        dead_end = False
+        condition_2c = False
+        if half_edges is None:
+            half_edges = []
+        result_tag = ''
 
         # Find first neighbor ccw of line sd
         neighbors = [node for node in self.g.neighbors(self.s)]
@@ -100,34 +106,38 @@ class OtherFaceRouting:
         min_angle_neighbor, _ = sorted_angles[0]
         face_nodes = set([self.s, min_angle_neighbor])
 
-        # If bound was hit by edge (v, min_angle_neighbor)
+        # If bound was hit by first edge (s, min_angle_neighbor)
         bound_hit = not self.inside_bound(min_angle_neighbor)
         if bound_hit:
-            self.invert_direction(bound_hit, mark_half_edges, self.s, min_angle_neighbor, self.s, face_nodes)
+            face_nodes, half_edges, result_tag, condition_2c = self.traverse_opposite_direction(face_nodes, half_edges,
+                                                                                  min_angle_neighbor, self.s)
         else:
             # Bound was not hit
             prev_node, cur_node = self.s, min_angle_neighbor
-            mark_half_edges.append((prev_node, cur_node))
+            half_edges.append((prev_node, cur_node))
             print('Half edge: ' + str((prev_node, cur_node)))
             if cur_node == self.d:
                 # Destination was reached
-                return face_nodes, dead_end
-            self.check_counters(cur_node, face_nodes, mark_half_edges)
+                return face_nodes, half_edges, ResultTag.SUCCESS, False
+            condition_2c = self.check_counters(cur_node, face_nodes, half_edges)
 
             # Iterate until face starting node is reached
-            while cur_node != self.s:
+            while cur_node != self.s and not condition_2c:
                 bound_hit, prev_node, cur_node = self.next_face_half_edge(prev_node, cur_node, 'ccw')
-                print('Current node Face Routing: ' + str(cur_node))
-                self.check_counters(cur_node, face_nodes, mark_half_edges)
+                #print('Current node Face Routing: ' + str(cur_node))
+                condition_2c = self.check_counters(cur_node, face_nodes, half_edges)
+                if condition_2c:
+                    break
                 if bound_hit:
-                    self.invert_direction(bound_hit, mark_half_edges, prev_node, cur_node, self.s, face_nodes)
+                    face_nodes, half_edges, result_tag, condition_2c = self.traverse_opposite_direction(face_nodes, half_edges,
+                                                                                          cur_node, prev_node)
                     break
                 else:
-                    face_nodes, mark_half_edges, dead_end, interrupt = check_last_edge(prev_node, cur_node, face_nodes, mark_half_edges, self.d)
-                    if interrupt:
+                    face_nodes, half_edges, result_tag = check_last_edge(prev_node, cur_node, face_nodes, half_edges, self.d)
+                    if result_tag != ResultTag.DEFAULT:
                         break
 
-        return face_nodes, dead_end
+        return face_nodes, half_edges, result_tag, condition_2c
 
     def next_face_half_edge(self, v, w, order) -> tuple[bool, int, None]:
         """Returns the following half-edge ccw of (v, w).
@@ -225,47 +235,48 @@ class OtherFaceRouting:
     ###################################################################################################################
     # Overridden in OBFR, GOAFR and GOAFRPlus
     ###################################################################################################################
+    def goafr_plus_2b(self, cur_node, half_edges, current_face):
+        # Condition 2b in GOAFR+
+        return False, self.route, ResultTag.DEFAULT
     def check_counters(self, cur_node, current_face, half_edges):
         # Check condition 2c in GOAFR+
-        pass
+        return False
     def terminate_face_routing_mode(self):
         return self.find_route_ofr()
     def check_closest_node_progress(self, last_node_reached, closest_node) -> bool:
         return True
-
+    def is_goafr_plus(self):
+        return False
+    def goafr_plus_greedy_mode(self):
+        return False, self.route, ResultTag.DEFAULT
     ###################################################################################################################
     # Methods for face traversal in opposite direction
     ###################################################################################################################
-    def invert_direction(self, bound_hit, half_edges, prev_node, cur_node, v, face_nodes):
-        # Prepare to traverse face in opposite direction in OBFR
-        pass
     def inside_bound(self, node):
         return True
-    def traverse_opposite_direction(self, v, face_nodes, prev_node, cur_node, mark_half_edges=None):
+    def traverse_opposite_direction(self, face_nodes, half_edges, cur_node, prev_node):
         # Explore face in opposite direction after bound is hit
-        pass
+        return face_nodes, half_edges, ResultTag.DEFAULT, False
 
 def check_last_edge(prev_node, cur_node, face_nodes, half_edges, d):
-    interrupt = False
-    dead_end = False
+    result_tag = ResultTag.DEFAULT
     if cur_node is None:
         # Dead end
         print('Face could not be traversed completely due to a dead end in ' + str(prev_node))
-        dead_end = True
-        interrupt = True
+        result_tag = ResultTag.DEAD_END
     else:
         face_nodes.add(cur_node)
         # mark_half_edges is a list which preserves order of how face was traversed
         if (prev_node, cur_node) in half_edges:
             print('Half-edge ' + str((prev_node, cur_node)) + ' was already encountered')
-            interrupt = True
+            result_tag = ResultTag.EDGE_ENCOUNTERED
         else:
             half_edges.append((prev_node, cur_node))
             print('Half edge: ' + str((prev_node, cur_node)))
             if cur_node == d:
                 # Destination was reached
-                interrupt = True
-    return face_nodes, half_edges, dead_end, interrupt
+                result_tag = ResultTag.SUCCESS
+    return face_nodes, half_edges, result_tag
 
 def calculate_angle_ccw(vector_a, vector_b):
     """ Calculate angle of vector_b counterclockwise from vector_a """

@@ -3,50 +3,10 @@ import networkx as nx
 import numpy as np
 from matplotlib.patches import Ellipse, Circle
 from scipy.spatial import distance
+
+from RoutingAlgos.geometricRouting.OBFR import OtherBoundedFaceRouting
 from RoutingAlgos.geometricRouting.OFR import OtherFaceRouting, calculate_angle_ccw, check_last_edge
 from util import ResultTag
-
-class OtherBoundedFaceRouting(OtherFaceRouting):
-    # TODO: The Euclidian length of the optimal path from s to d is required to create the ellipse
-    def __init__(self, graph: nx.DiGraph, start: int, destination: int, positions: dict, searchable_area: Ellipse | Circle):
-        self.searchable_area = searchable_area
-        super().__init__(graph, start, destination, positions)
-
-    def inside_bound(self, node):
-        return self.searchable_area.contains_point(self.positions[node])
-
-    def traverse_opposite_direction(self, v, face_nodes, prev_node, cur_node, mark_half_edges=None):
-        # Explore face in opposite direction
-        bound_hit = False
-        while not bound_hit:
-            bound_hit, prev_node, cur_node = self.next_face_half_edge(prev_node, cur_node, 'cw')
-            self.check_counters(cur_node, face_nodes, mark_half_edges)
-            face_nodes, mark_half_edges, dead_end, interrupt = check_last_edge(prev_node, cur_node, face_nodes, mark_half_edges, self.d)
-            if interrupt:
-                break
-            self.goafr_plus_2b(cur_node, mark_half_edges, face_nodes, bound_hit)
-            #print('Bound was hit for the second time by this edge: ' + str((prev_node, cur_node)))
-
-    def goafr_plus_2b(self, cur_node, half_edges, current_face, bound_hit):
-        # Condition 2b in GOAFR+
-        pass
-
-    def find_route_obfr(self) -> tuple[bool, list[int], str]:
-        return super().find_route_ofr()
-
-    def invert_direction(self, bound_hit, half_edges, prev_node, cur_node, v, face_nodes):
-        if bound_hit:
-            print('Bound was hit for the first time by this edge: ' + str((prev_node, cur_node)))
-            half_edges.extend([(prev_node, cur_node), (cur_node, prev_node)])
-            prev_node, cur_node = cur_node, prev_node
-            self.traverse_opposite_direction(prev_node, face_nodes, prev_node, cur_node, mark_half_edges=half_edges)
-
-    def check_closest_node_progress(self, last_node_reached, closest_node) -> bool:
-        if last_node_reached == closest_node and closest_node == self.previous_closest_node:
-            print('Closest node was already encountered')
-            return False
-        else:
-            return True
 
 class OtherAdaptiveFaceRouting(OtherBoundedFaceRouting):
     def __init__(self, graph: nx.DiGraph, start: int, destination: int, positions: dict):
@@ -74,9 +34,6 @@ class OtherAdaptiveFaceRouting(OtherBoundedFaceRouting):
             else:
                 # ResultTag.LOOP or ResultTag.DEAD_END or ResultTag.FACE
                 return result_obfr, self.route, result_tag_obfr
-
-    def oafr_routing_mode(self):
-        self.find_route_oafr()
 
 def create_ellipse(pos_s: tuple, pos_d: tuple) -> matplotlib.patches.Ellipse:
     distance_s_d = distance.euclidean(pos_s, pos_d)

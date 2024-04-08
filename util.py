@@ -21,3 +21,7 @@ class ResultTag:
     SUCCESS: str = 'Destination was reached'
     FACE: str = 'Face was traversed'
     NO_PROGRESS: str = 'Current closest node is the same as in the previous iteration'
+    EDGE_ENCOUNTERED: str = 'Edge was already encountered'
+    DEFAULT: str = 'Catch-all for other cases'
+    SECOND_BOUND_HIT: str = 'Bound was hit for the second time'
+    CONDITION_2B: str = 'Condition 2b is true'

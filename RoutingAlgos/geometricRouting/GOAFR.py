@@ -23,7 +23,7 @@ class GreedyOtherAdaptiveFaceRouting(GreedyRouting, OtherAdaptiveFaceRouting):
         # If greedy mode failed (local minimum) -> Traverse one face in OAFR mode
         if result_tag_greedy == ResultTag.LOCAL_MINIMUM:
             print("Switched to Face Routing Mode")
-            result_oafr, route_oafr, result_tag_oafr = super().oafr_routing_mode()
+            result_oafr, route_oafr, result_tag_oafr = super().find_route_oafr()
             self.route.extend(route_oafr)
             if result_oafr:
                 return True, self.route, result_tag_oafr

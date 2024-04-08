@@ -5,8 +5,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0103994
+    "mean_performance": 3.0,
+    "iteration_time": 0.0068677
   },
   {
     "iteration": 1,
@@ -14,8 +14,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0371311
+    "mean_performance": 3.0,
+    "iteration_time": 0.084602
   },
   {
     "iteration": 2,
@@ -23,8 +23,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0421651
+    "mean_performance": 3.0,
+    "iteration_time": 0.030718
   },
   {
     "iteration": 3,
@@ -32,8 +32,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0202606
+    "mean_performance": 3.0,
+    "iteration_time": 0.0461968
   },
   {
     "iteration": 4,
@@ -41,8 +41,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0055649
+    "mean_performance": 3.0,
+    "iteration_time": 0.2756654
   },
   {
     "iteration": 5,
@@ -50,8 +50,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0264166
+    "mean_performance": 3.0,
+    "iteration_time": 0.0444251
   },
   {
     "iteration": 6,
@@ -59,8 +59,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.083349
+    "mean_performance": 3.0,
+    "iteration_time": 0.0097075
   },
   {
     "iteration": 7,
@@ -68,8 +68,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2080614
+    "mean_performance": 3.0,
+    "iteration_time": 0.0060187
   },
   {
     "iteration": 8,
@@ -77,8 +77,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0753762
+    "mean_performance": 3.0,
+    "iteration_time": 0.0800735
   },
   {
     "iteration": 9,
@@ -86,8 +86,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.07853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0354861
+    "mean_performance": 3.0,
+    "iteration_time": 0.0200108
   },
   {
     "iteration": 10,
@@ -95,8 +95,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0093106
+    "mean_performance": 3.0,
+    "iteration_time": 0.0230804
   },
   {
     "iteration": 11,
@@ -104,8 +104,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0435988
+    "mean_performance": 3.0,
+    "iteration_time": 0.1351564
   },
   {
     "iteration": 12,
@@ -113,8 +113,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1871624
+    "mean_performance": 3.0,
+    "iteration_time": 0.0664342
   },
   {
     "iteration": 13,
@@ -122,8 +122,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0928306
+    "mean_performance": 3.0,
+    "iteration_time": 0.0272484
   },
   {
     "iteration": 14,
@@ -131,8 +131,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0469552
+    "mean_performance": 3.0,
+    "iteration_time": 0.0242178
   },
   {
     "iteration": 15,
@@ -140,8 +140,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0456816
+    "mean_performance": 3.0,
+    "iteration_time": 0.0757988
   },
   {
     "iteration": 16,
@@ -149,8 +149,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0711089
+    "mean_performance": 3.0,
+    "iteration_time": 0.0688953
   },
   {
     "iteration": 17,
@@ -158,8 +158,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0300664
+    "mean_performance": 3.0,
+    "iteration_time": 0.1248379
   },
   {
     "iteration": 18,
@@ -167,8 +167,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1070298
+    "mean_performance": 3.0,
+    "iteration_time": 0.0511075
   },
   {
     "iteration": 19,
@@ -176,8 +176,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.15707963267948966,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0899497
+    "mean_performance": 3.0,
+    "iteration_time": 0.0691362
   },
   {
     "iteration": 20,
@@ -185,8 +185,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1990039
+    "mean_performance": 3.0,
+    "iteration_time": 0.0037649
   },
   {
     "iteration": 21,
@@ -194,8 +194,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1166243
+    "mean_performance": 3.0,
+    "iteration_time": 0.1612673
   },
   {
     "iteration": 22,
@@ -203,8 +203,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3240759
+    "mean_performance": 3.0,
+    "iteration_time": 0.3607685
   },
   {
     "iteration": 23,
@@ -212,8 +212,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0948676
+    "mean_performance": 3.0,
+    "iteration_time": 0.1114709
   },
   {
     "iteration": 24,
@@ -221,8 +221,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.031422
+    "mean_performance": 3.0,
+    "iteration_time": 0.3416502
   },
   {
     "iteration": 25,
@@ -230,8 +230,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1607501
+    "mean_performance": 3.0,
+    "iteration_time": 0.0339467
   },
   {
     "iteration": 26,
@@ -239,8 +239,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2292062
+    "mean_performance": 3.0,
+    "iteration_time": 0.0597712
   },
   {
     "iteration": 27,
@@ -248,8 +248,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1968289
+    "mean_performance": 3.0,
+    "iteration_time": 0.2436812
   },
   {
     "iteration": 28,
@@ -257,8 +257,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0287196
+    "mean_performance": 2.988505747126437,
+    "iteration_time": 0.391967
   },
   {
     "iteration": 29,
@@ -266,8 +266,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.23561944901923446,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2968414
+    "mean_performance": 2.9777777777777783,
+    "iteration_time": 0.2895709
   },
   {
     "iteration": 30,
@@ -275,8 +275,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.5278973
+    "mean_performance": 2.9784946236559144,
+    "iteration_time": 0.1481389
   },
   {
     "iteration": 31,
@@ -284,8 +284,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6520891
+    "mean_performance": 2.979166666666667,
+    "iteration_time": 1.1204926
   },
   {
     "iteration": 32,
@@ -293,8 +293,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0959502
+    "mean_performance": 2.97979797979798,
+    "iteration_time": 0.0469207
   },
   {
     "iteration": 33,
@@ -302,8 +302,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2282776
+    "mean_performance": 2.980392156862745,
+    "iteration_time": 0.0087178
   },
   {
     "iteration": 34,
@@ -311,8 +311,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.5010911
+    "mean_performance": 2.980952380952381,
+    "iteration_time": 0.603184
   },
   {
     "iteration": 35,
@@ -320,8 +320,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3163222
+    "mean_performance": 2.981481481481482,
+    "iteration_time": 0.046063
   },
   {
     "iteration": 36,
@@ -329,8 +329,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2449145
+    "mean_performance": 2.981981981981982,
+    "iteration_time": 0.3883366
   },
   {
     "iteration": 37,
@@ -338,8 +338,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3844794
+    "mean_performance": 2.9824561403508776,
+    "iteration_time": 0.0173614
   },
   {
     "iteration": 38,
@@ -347,8 +347,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.1130005
+    "mean_performance": 2.982905982905983,
+    "iteration_time": 0.8735278
   },
   {
     "iteration": 39,
@@ -356,8 +356,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.3141592653589793,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1200339
+    "mean_performance": 2.9833333333333334,
+    "iteration_time": 0.4029976
   },
   {
     "iteration": 40,
@@ -365,8 +365,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0137384
+    "mean_performance": 2.983739837398374,
+    "iteration_time": 0.3245441
   },
   {
     "iteration": 41,
@@ -374,8 +374,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.916865
+    "mean_performance": 2.984126984126984,
+    "iteration_time": 0.5277428
   },
   {
     "iteration": 42,
@@ -383,8 +383,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.5226202
+    "mean_performance": 2.984496124031008,
+    "iteration_time": 0.1666664
   },
   {
     "iteration": 43,
@@ -392,8 +392,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6652145
+    "mean_performance": 2.984848484848485,
+    "iteration_time": 0.2508027
   },
   {
     "iteration": 44,
@@ -401,8 +401,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3206641
+    "mean_performance": 2.9851851851851854,
+    "iteration_time": 0.7215464
   },
   {
     "iteration": 45,
@@ -410,8 +410,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.906504
+    "mean_performance": 2.985507246376812,
+    "iteration_time": 0.0209988
   },
   {
     "iteration": 46,
@@ -419,8 +419,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1698874
+    "mean_performance": 2.9858156028368796,
+    "iteration_time": 0.454331
   },
   {
     "iteration": 47,
@@ -428,8 +428,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 2.5133105
+    "mean_performance": 2.986111111111111,
+    "iteration_time": 0.1112664
   },
   {
     "iteration": 48,
@@ -437,8 +437,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3729518
+    "mean_performance": 2.9863945578231292,
+    "iteration_time": 1.0399458
   },
   {
     "iteration": 49,
@@ -446,8 +446,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.39269908169872414,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.8626971
+    "mean_performance": 2.986666666666667,
+    "iteration_time": 0.0377737
   },
   {
     "iteration": 50,
@@ -455,8 +455,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.7389304
+    "mean_performance": 2.9869281045751634,
+    "iteration_time": 0.8078597
   },
   {
     "iteration": 51,
@@ -464,8 +464,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 2.6694681
+    "mean_performance": 2.9775641025641026,
+    "iteration_time": 0.5815323
   },
   {
     "iteration": 52,
@@ -473,8 +473,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3400962
+    "mean_performance": 2.977987421383648,
+    "iteration_time": 0.7115712
   },
   {
     "iteration": 53,
@@ -482,8 +482,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.2562396
+    "mean_performance": 2.978395061728395,
+    "iteration_time": 1.6535102
   },
   {
     "iteration": 54,
@@ -491,8 +491,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2212352
+    "mean_performance": 2.978787878787879,
+    "iteration_time": 1.5346998
   },
   {
     "iteration": 55,
@@ -500,8 +500,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 2.3064288
+    "mean_performance": 2.979166666666667,
+    "iteration_time": 0.1959678
   },
   {
     "iteration": 56,
@@ -509,8 +509,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6001222
+    "mean_performance": 2.973684210526316,
+    "iteration_time": 1.1472801
   },
   {
     "iteration": 57,
@@ -518,8 +518,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.6618845
+    "mean_performance": 2.9741379310344827,
+    "iteration_time": 0.700666
   },
   {
     "iteration": 58,
@@ -527,8 +527,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2932515
+    "mean_performance": 2.9745762711864407,
+    "iteration_time": 1.6049715
   },
   {
     "iteration": 59,
@@ -536,8 +536,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.4712388980384689,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.4035226
+    "mean_performance": 2.969444444444444,
+    "iteration_time": 1.6401408
   },
   {
     "iteration": 60,
@@ -545,8 +545,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.7615727
+    "mean_performance": 2.9699453551912565,
+    "iteration_time": 2.489056
   },
   {
     "iteration": 61,
@@ -554,8 +554,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2485217
+    "mean_performance": 2.9704301075268815,
+    "iteration_time": 0.9874322
   },
   {
     "iteration": 62,
@@ -563,8 +563,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.8689688
+    "mean_performance": 2.9708994708994707,
+    "iteration_time": 0.3671956
   },
   {
     "iteration": 63,
@@ -572,8 +572,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 9.0412469
+    "mean_performance": 2.9713541666666665,
+    "iteration_time": 2.0831563
   },
   {
     "iteration": 64,
@@ -581,8 +581,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.2860362
+    "mean_performance": 2.9717948717948715,
+    "iteration_time": 0.0326983
   },
   {
     "iteration": 65,
@@ -590,8 +590,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.4563942
+    "mean_performance": 2.9671717171717167,
+    "iteration_time": 2.4383762
   },
   {
     "iteration": 66,
@@ -599,8 +599,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.0787672
+    "mean_performance": 2.9676616915422884,
+    "iteration_time": 2.0147083
   },
   {
     "iteration": 67,
@@ -608,8 +608,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 4.7126431
+    "mean_performance": 2.9681372549019605,
+    "iteration_time": 0.3164256
   },
   {
     "iteration": 68,
@@ -617,8 +617,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.5572799
+    "mean_performance": 2.968599033816425,
+    "iteration_time": 2.6213886
   },
   {
     "iteration": 69,
@@ -626,8 +626,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.5497787143782138,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.7886565
+    "mean_performance": 2.9690476190476187,
+    "iteration_time": 1.4149939
   },
   {
     "iteration": 70,
@@ -635,8 +635,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.9418451
+    "mean_performance": 2.969483568075117,
+    "iteration_time": 2.8118593
   },
   {
     "iteration": 71,
@@ -644,8 +644,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.3383795
+    "mean_performance": 2.9652777777777772,
+    "iteration_time": 3.4429987
   },
   {
     "iteration": 72,
@@ -653,8 +653,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 8.0772159
+    "mean_performance": 2.965753424657534,
+    "iteration_time": 1.8591796
   },
   {
     "iteration": 73,
@@ -662,8 +662,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 4.8026567
+    "mean_performance": 2.966216216216216,
+    "iteration_time": 2.1676704
   },
   {
     "iteration": 74,
@@ -671,8 +671,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.504104
+    "mean_performance": 2.9666666666666663,
+    "iteration_time": 1.1919343
   },
   {
     "iteration": 75,
@@ -680,8 +680,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.8292076
+    "mean_performance": 2.9671052631578942,
+    "iteration_time": 2.6043172
   },
   {
     "iteration": 76,
@@ -689,8 +689,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 6.2933442
+    "mean_performance": 2.9675324675324672,
+    "iteration_time": 0.4850203
   },
   {
     "iteration": 77,
@@ -698,8 +698,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.7254531
+    "mean_performance": 2.9636752136752134,
+    "iteration_time": 1.3393084
   },
   {
     "iteration": 78,
@@ -707,8 +707,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 1.3642982
+    "mean_performance": 2.964135021097046,
+    "iteration_time": 0.5590563
   },
   {
     "iteration": 79,
@@ -716,8 +716,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.6283185307179586,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 7.7540315
+    "mean_performance": 2.9604166666666663,
+    "iteration_time": 0.7803599
   },
   {
     "iteration": 80,
@@ -725,8 +725,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1085595
+    "mean_performance": 2.9567901234567895,
+    "iteration_time": 1.8627017
   },
   {
     "iteration": 81,
@@ -734,8 +734,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 3.3229807
+    "mean_performance": 2.957317073170731,
+    "iteration_time": 5.7634841
   },
   {
     "iteration": 82,
@@ -743,8 +743,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.2847136
+    "mean_performance": 2.9538152610441757,
+    "iteration_time": 0.6087015
   },
   {
     "iteration": 83,
@@ -752,8 +752,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 16.204672
+    "mean_performance": 2.9543650793650786,
+    "iteration_time": 0.7823099
   },
   {
     "iteration": 84,
@@ -761,8 +761,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 3.5850778
+    "mean_performance": 2.954901960784313,
+    "iteration_time": 6.8522148
   },
   {
     "iteration": 85,
@@ -770,8 +770,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 4.1214183
+    "mean_performance": 2.9554263565891463,
+    "iteration_time": 2.9678084
   },
   {
     "iteration": 86,
@@ -779,8 +779,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6653022
+    "mean_performance": 3.4731800766283523,
+    "iteration_time": 0.1460354
   },
   {
     "iteration": 87,
@@ -788,8 +788,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6180244
+    "mean_performance": 3.46780303030303,
+    "iteration_time": 0.7070472
   },
   {
     "iteration": 88,
@@ -797,8 +797,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 4.5085582
+    "mean_performance": 3.4625468164794,
+    "iteration_time": 10.265523
   },
   {
     "iteration": 89,
@@ -806,8 +806,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7068583470577035,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.0542204
+    "mean_performance": 3.457407407407407,
+    "iteration_time": 4.051305
   },
   {
     "iteration": 90,
@@ -815,8 +815,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.4092514
+    "mean_performance": 3.4468864468864466,
+    "iteration_time": 0.4691873
   },
   {
     "iteration": 91,
@@ -824,8 +824,8 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 12.5306143
+    "mean_performance": 3.442028985507246,
+    "iteration_time": 0.3142964
   },
   {
     "iteration": 92,
@@ -833,70 +833,70 @@
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
     "success_rate": 1.0,
-    "mean_performance": 1.0,
-    "iteration_time": 0.5652731
+    "mean_performance": 3.437275985663082,
+    "iteration_time": 0.2884673
   },
   {
     "iteration": 93,
-    "success": false,
-    "result_tag": "Local minimum",
+    "success": true,
+    "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.9893617021276596,
-    "mean_performance": 1.0,
-    "iteration_time": 3.7156824
+    "success_rate": 1.0,
+    "mean_performance": 3.429078014184397,
+    "iteration_time": 2.7761276
   },
   {
     "iteration": 94,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.9894736842105263,
-    "mean_performance": 1.0,
-    "iteration_time": 0.8469435
+    "success_rate": 1.0,
+    "mean_performance": 3.419298245614035,
+    "iteration_time": 0.3047816
   },
   {
     "iteration": 95,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.9895833333333334,
-    "mean_performance": 1.0,
-    "iteration_time": 8.6037446
+    "success_rate": 1.0,
+    "mean_performance": 3.4149305555555554,
+    "iteration_time": 1.2738927
   },
   {
     "iteration": 96,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.9896907216494846,
-    "mean_performance": 1.0,
-    "iteration_time": 0.6442015
+    "success_rate": 1.0,
+    "mean_performance": 3.410652920962199,
+    "iteration_time": 0.9664893
   },
   {
     "iteration": 97,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.9897959183673469,
-    "mean_performance": 1.0,
-    "iteration_time": 0.1874702
+    "success_rate": 1.0,
+    "mean_performance": 3.4064625850340136,
+    "iteration_time": 1.4084629
   },
   {
     "iteration": 98,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.98989898989899,
-    "mean_performance": 1.0,
-    "iteration_time": 3.7678569
+    "success_rate": 1.0,
+    "mean_performance": 3.4023569023569022,
+    "iteration_time": 5.6363034
   },
   {
     "iteration": 99,
     "success": true,
     "result_tag": "Destination was reached",
     "network_density": 0.7853981633974483,
-    "success_rate": 0.99,
-    "mean_performance": 1.0,
-    "iteration_time": 1.0664005
+    "success_rate": 1.0,
+    "mean_performance": 3.398333333333333,
+    "iteration_time": 4.9077761
   }
 ]

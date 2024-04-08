@@ -2,7 +2,7 @@ import networkx as nx
 from matplotlib.patches import Circle
 from scipy.spatial import distance
 from RoutingAlgos.geometricRouting.GreedyRouting import GreedyRouting
-from RoutingAlgos.geometricRouting.OAFR import OtherBoundedFaceRouting
+from RoutingAlgos.geometricRouting.OBFR import OtherBoundedFaceRouting
 from util import ResultTag
 
 class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
@@ -19,31 +19,32 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
         else:
             raise ValueError('Invalid parameters')
 
-    def find_route_goafr_plus(self) -> tuple[bool, list[int], str]:
-        # TODO: This is identical to GOAFR apart from calling FaceRouting instead of OAFR
-        # Greedy Routing Mode
+    def greedy_routing_mode(self):
         result_greedy, route_greedy, result_tag_greedy = self.find_route_greedy()
         self.route.extend(route_greedy)
+        self.s = self.route[-1]
         if result_greedy:
             return True, self.route, result_tag_greedy
-        self.s = self.route[-1]
-
-        # If greedy mode failed (local minimum) -> Go into Face Routing Mode
-        if result_tag_greedy == ResultTag.LOCAL_MINIMUM:
+        # If local minimum was encountered -> Go into Face Routing Mode
+        elif result_tag_greedy == ResultTag.LOCAL_MINIMUM:
             print("Switched to Face Routing Mode")
-            result_face, route_face, result_tag_face = self.find_route_obfr()
-            self.route.extend(route_face)
-            if result_face:
-                return True, self.route, result_tag_face
-            else:
-                if result_tag_face == ResultTag.DEAD_END or result_tag_face == ResultTag.LOOP:
-                    return False, self.route, result_tag_face
-                else:
-                    self.s = self.route[-1]
-                    return self.find_route_goafr_plus()
+            return self.face_routing_mode()
         else:
             # Dead end was encountered in greedy mode
             return False, self.route, result_tag_greedy
+
+    def face_routing_mode(self):
+        result_face, route_face, result_tag_face = self.find_route_obfr()
+        self.route.extend(route_face)
+        self.s = self.route[-1]
+        if result_face:
+            return True, self.route, result_tag_face
+        else:
+            if result_tag_face == ResultTag.DEAD_END or result_tag_face == ResultTag.LOOP:
+                return False, self.route, result_tag_face
+            # Face F boundary exploration was complete
+            else:
+                return self.greedy_routing_mode()
 
     ################################################################################################################################################
     # GreedyRouting overrides
@@ -58,16 +59,18 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
     ###################################################################################################################################################
     # OtherAdaptiveFaceRouting overrides
     ###################################################################################################################################################
-    def goafr_plus_2b(self, cur_node, half_edges, current_face, bound_hit):
-        if bound_hit:
-            if self.p == 0:
-                # Enlarge circle and continue in Face Routing Mode
-                self.searchable_area.set_radius(self.searchable_area.radius * self.rho)
-            else:
-                last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
-                self.route.extend(path_last_node_reached)
-                self.s = last_node_reached
-                self.find_route_goafr_plus()
+    # Condition 2b
+    def goafr_plus_2b(self, cur_node, half_edges, current_face):
+        # None of the visited nodes are closer to d than local minimum
+        if self.p == 0:
+            # Enlarge circle and continue in Face Routing Mode
+            self.searchable_area.set_radius(self.searchable_area.radius * self.rho)
+            self.face_routing_mode()
+        else:
+            last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
+            self.route.extend(path_last_node_reached)
+            self.s = last_node_reached
+            return self.greedy_routing_mode()
 
     # Condition 2c
     def check_counters(self, cur_node, current_face, half_edges):
@@ -80,4 +83,11 @@ class GOAFRPlus(GreedyRouting, OtherBoundedFaceRouting):
             last_node_reached, closest_node, path_last_node_reached = super().route_to_closest_node(cur_node, current_face, half_edges)
             self.route.extend(path_last_node_reached)
             self.s = last_node_reached
-            self.find_route_goafr_plus()
+            return True
+        else:
+            return False
+
+    def is_goafr_plus(self):
+        return True
+    def goafr_plus_greedy_mode(self):
+        return self.greedy_routing_mode()

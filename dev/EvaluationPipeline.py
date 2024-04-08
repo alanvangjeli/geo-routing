@@ -115,7 +115,7 @@ for i in range(k):
     start = time.process_time()
     # GOAFR params: 1.4, np.sqrt(2), 0.01
     #success, route, resultTag = algorithm.find_route(planar_graph, s, d, positions)
-    success, route, resultTag = algorithm.find_route_goafr_plus()
+    success, route, resultTag = algorithm.greedy_routing_mode()
 
     # Measure metrics
     # Success

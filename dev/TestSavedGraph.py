@@ -7,17 +7,12 @@ from RoutingAlgos.geometricRouting.GOAFRPlus import GOAFRPlus
 from RoutingAlgos.geometricRouting.OFR import OtherFaceRouting
 
 # Load graph object from file
-planar_graph = pickle.load(open('test_planar_graph.pickle', 'rb'))
+planar_graph = pickle.load(open('challengeExamples/double_face_loop_s26_d16.pickle', 'rb'))
 nodes_data = planar_graph.nodes(data=True)
 nodes, data = list(zip(*nodes_data))
-s = 24
-d = 0
+s = 26
+d = 16
 # #random.seed(7)
-# s = random.choice(nodes)
-# tmp_nodes = list(nodes)
-# tmp_nodes.remove(s)
-# tmp_nodes = tuple(tmp_nodes)
-# d = random.choice(tmp_nodes)
 
 print('Is the graph planar: ' + str(nx.is_planar(planar_graph)))
 
@@ -34,9 +29,9 @@ plt.show()
 
 # Algorithm test
 print('Route from ' + str(s) + ' to ' + str(d) + ' exists')
-ofr = OtherFaceRouting()
-goafr_plus = GOAFRPlus()
-result, route, resultTag = goafr_plus.find_route_goafr_plus(planar_graph, s, d, positions, 1.4, np.sqrt(2), 0.01)
+ofr = OtherFaceRouting(planar_graph, s, d, positions)
+goafr_plus = GOAFRPlus(planar_graph, s, d, positions, np.sqrt(2), 0.01, 1.4)
+result, route, resultTag = ofr.find_route_ofr()
 if result:
     print('Result tag: ' + str(resultTag))
     print('Route: ' + str(route))
