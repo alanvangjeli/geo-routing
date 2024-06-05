@@ -1,0 +1,12 @@
+{
+  "GOAFRPlus": {
+    "success_rate": 0.8210714285714286,
+    "mean_performance": 1.1250773424740212,
+    "average_runtime": 3.7258820000000012
+  },
+  "GOAFRPlusSCC": {
+    "success_rate": 0.7803571428571429,
+    "mean_performance": 1.130473957378797,
+    "average_runtime": 3.759313892857145
+  }
+}

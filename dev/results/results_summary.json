@@ -1,0 +1,33 @@
+{
+  "GR": {
+    "success_rate": 0.68925,
+    "mean_performance": 1.0866718688399655,
+    "average_runtime_ms": 0.8585578068181822
+  },
+  "OFR": {
+    "success_rate": 0.6232045454545454,
+    "mean_performance": 3.808312344981548,
+    "average_runtime_ms": 4.249860309090923
+  },
+  "OAFR": {
+    "success_rate": 0.49886363636363634,
+    "mean_performance": 3.500561524210193,
+    "average_runtime_ms": 5.2736354022727205
+  },
+  "GOAFR": {
+    "success_rate": 0.8125681818181818,
+    "mean_performance": 1.1587895225592195,
+    "average_runtime_ms": 1.8159629522727314
+  },
+  "GOAFR+": {
+    "success_rate": 0.8165681818181818,
+    "mean_performance": 1.1238192141274117,
+    "average_runtime_ms": 1.8392661545454463
+  },
+  "GOAFR+SCC": {
+    "success_rate": 0.7851590909090909,
+    "mean_performance": 1.1274050630462993,
+    "average_runtime_ms": 1.981584156818185
+  },
+  "total_execution_time_s": 7161.0221578
+}

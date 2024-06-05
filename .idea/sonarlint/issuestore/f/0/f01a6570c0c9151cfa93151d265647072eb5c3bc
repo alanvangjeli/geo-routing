@@ -1,16 +1,16 @@
 
-™python:S3776"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.(ֽט§װ8Ùצלני1J$3b0531d5-52bd-431a-887b-a8f85f6c6d73
-python:S3776S"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(שֶ§רÿÿÿÿ8׳ סי1J$816aeb52-35aa-49ae-bf2b-a2a07439af7d
-python:S3776ֵ"TRefactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.(Ùע׀שÿÿÿÿ8Ùצלני1J$0ce9b8d7-6bfe-401f-9c12-ac228b0bcff7
-zpython:S1135Û"4Complete the task associated to this "TODO" comment.(§׀ֽ¢8Ùצלני1J$ed511158-00b9-4722-abf0-a190bff7ae79
-}python:S1172מ"2Remove the unused function parameter "half_edges".(¥הײנשÿÿÿÿ8Úצלני1J$2110306e-22a3-4be2-b764-1098d45fd0e6
-{python:S1172מ"0Remove the unused function parameter "cur_node".(¥הײנשÿÿÿÿ8Úצלני1J$6e9a0022-95b7-4a0f-b38b-b1b8f760c83a
-python:S1172מ"4Remove the unused function parameter "current_face".(¥הײנשÿÿÿÿ8Úצלני1J$ebc5c032-5806-491c-9ec6-e579e7ecb8f3
-vpython:S1172ס"0Remove the unused function parameter "cur_node".(÷´«ס8Úצלני1J$c05021ed-edd3-48e3-9cbf-fc4786361557
-xpython:S1172ס"2Remove the unused function parameter "half_edges".(÷´«ס8י¬םני1J$f772915c-a635-4b33-90b1-ae390ede545d
-zpython:S1172ס"4Remove the unused function parameter "current_face".(÷´«ס8י¬םני1J$b5da5c8b-408c-47b3-a303-a5b09ea20760
-python:S1172צ"4Remove the unused function parameter "closest_node".(ֳִ¨ִ‏ÿÿÿÿ8Úצלני1J$a4af9a7f-89ea-4835-bcc0-b675dbb96183
-„python:S1172צ"9Remove the unused function parameter "last_node_reached".(ֳִ¨ִ‏ÿÿÿÿ8Úצלני1J$df0f5eac-b24a-4be2-bdf5-c1404b5dca42
-rpython:S1172ÿ",Remove the unused function parameter "node".(תָÛױ8Úצלני1J$42e42915-b364-45f1-99df-9b492c1df24a
-{python:S1172"0Remove the unused function parameter "cur_node".(דהשÿÿÿÿÿ8ך¬םני1J$503db43d-345c-4549-a967-28b986355508
-|python:S1172"1Remove the unused function parameter "prev_node".(דהשÿÿÿÿÿ8Úצלני1J$0e6b6981-b3ce-41a1-8075-2ef4b51c4372
+spython:S3776"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.(ֽט§װ8פ×´נכ1
+xpython:S3776S"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(שֶ§רÿÿÿÿ8פ×´נכ1
+ypython:S3776ֵ"TRefactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.(Ùע׀שÿÿÿÿ8פ×´נכ1
+Tpython:S1135Û"4Complete the task associated to this "TODO" comment.(§׀ֽ¢8ץ×´נכ1
+Upython:S1172מ"0Remove the unused function parameter "cur_node".(¥הײנשÿÿÿÿ8ץ×´נכ1
+Wpython:S1172מ"2Remove the unused function parameter "half_edges".(¥הײנשÿÿÿÿ8ץ×´נכ1
+Ypython:S1172מ"4Remove the unused function parameter "current_face".(¥הײנשÿÿÿÿ8ץ×´נכ1
+Ppython:S1172ס"0Remove the unused function parameter "cur_node".(÷´«ס8ץ×´נכ1
+Tpython:S1172ס"4Remove the unused function parameter "current_face".(÷´«ס8ץ×´נכ1
+Rpython:S1172ס"2Remove the unused function parameter "half_edges".(÷´«ס8ץ×´נכ1
+^python:S1172צ"9Remove the unused function parameter "last_node_reached".(ֳִ¨ִ‏ÿÿÿÿ8ץ×´נכ1
+Ypython:S1172צ"4Remove the unused function parameter "closest_node".(ֳִ¨ִ‏ÿÿÿÿ8ץ×´נכ1
+Lpython:S1172ÿ",Remove the unused function parameter "node".(תָÛױ8צ×´נכ1
+Vpython:S1172"1Remove the unused function parameter "prev_node".(דהשÿÿÿÿÿ8צ×´נכ1
+Upython:S1172"0Remove the unused function parameter "cur_node".(דהשÿÿÿÿÿ8צ×´נכ1

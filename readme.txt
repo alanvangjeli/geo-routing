@@ -1,11 +1,8 @@
-Install: pip install -r requirements.txt
-Run: py Experiments.py
-Experiments in Experiments.py, for further documentation see Master's Thesis.
+Install dependencies: pip install -r requirements.txt
+For the tests run: py dev/EvaluationPipeline.py
 
-Code partially based on:
-https://github.com/oliver306/TREE (Oliver Schweiger, Klaus-Tycho Foerster, Stefan Schmid)
-https://gitlab.cs.univie.ac.at/ct-papers/fast-failover/-/tree/master (Klaus-Tycho Foerster, Andrzej Kamisinski, Yvonne-Anne Pignolet, Stefan Schmid, Gilles Tredan)
+Experiments are in EvaluationPipeline.py, for further information see Master's Thesis.
+Random planar graph generation pipeline is in GraphGenerator.py
+All geometric algorithms are defined in RoutingAlgos/GeometricRouting
 
-Data in ./data/* from:
-https://research.cs.washington.edu/networking/rocketfuel/
-http://www.topology-zoo.org/
+Code is based on algorithm descriptions from the papers, see Bibliography.

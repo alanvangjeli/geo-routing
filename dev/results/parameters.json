@@ -1,0 +1,11 @@
+{
+  "radius_lower_bound": 0.75,
+  "radius_upper_bound": 1.25,
+  "position_lower_bound": 0,
+  "position_upper_bound": 20,
+  "iterations": 44000,
+  "network_density_number": 22,
+  "interval_length": 2000,
+  "node_increase_factor": 128,
+  "recursion_depth_limit": 50
+}
